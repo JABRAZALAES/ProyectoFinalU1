@@ -4,6 +4,7 @@
     {{ $cliente->name ?? "{{ __('Show') Cliente" }}
 @endsection
 
+
 @section('content')
     <section class="content container-fluid">
         <div class="row">

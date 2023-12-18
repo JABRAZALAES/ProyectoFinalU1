@@ -37,7 +37,7 @@
                                         <th>No</th>
                                         
 										<th>Nombre</th>
-										<th>Descripción</th>
+										<th>Descripció n</th>
 										<th>Precio</th>
 										<th>Cliente Id</th>
 

@@ -1,5 +1,6 @@
 <div class="box box-info padding-1">
     <div class="box-body">
+        <h5>Bienvenido</h5>
         
         <div class="form-group">
             {{ Form::label('Nombre') }}

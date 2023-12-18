@@ -37,7 +37,7 @@
                                         <th>No</th>
                                         
 										<th>Nombre</th>
-										<th>Direccion1</th>
+										<th>Direccion</th>
 										<th>Telefono</th>
 
                                         <th></th>

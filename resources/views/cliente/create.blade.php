@@ -8,6 +8,7 @@
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
+                <h3>hola</h3>
 
                 @includeif('partials.errors')
 

@@ -4,7 +4,6 @@
     {{ $cliente->name ?? "{{ __('Show') Cliente" }}
 @endsection
 
-
 @section('content')
     <section class="content container-fluid">
         <div class="row">
@@ -15,7 +14,7 @@
                             <span class="card-title">{{ __('Show') }} Cliente</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('clientes.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary" href="{{ route('clientes.index') }}"> {{ __('Atrás') }}</a>
                         </div>
                     </div>
 
@@ -26,11 +25,11 @@
                             {{ $cliente->Nombre }}
                         </div>
                         <div class="form-group">
-                            <strong>Direccion:</strong>
+                            <strong>Dirección:</strong>
                             {{ $cliente->Direccion }}
                         </div>
                         <div class="form-group">
-                            <strong>Telefono:</strong>
+                            <strong>Teléfono:</strong>
                             {{ $cliente->Telefono }}
                         </div>
 
@@ -39,4 +38,5 @@
             </div>
         </div>
     </section>
+    <br><br><br><br><br><br>
 @endsection

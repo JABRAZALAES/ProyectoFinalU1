@@ -4,6 +4,7 @@
     Cliente
 @endsection
 
+
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -18,7 +19,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('clientes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                    <i class="fas fa-plus"></i>{{ __('Crear Nuevo') }}
                                 </a>
                               </div>
                         </div>
@@ -37,8 +38,8 @@
                                         <th>No</th>
                                         
 										<th>Nombre</th>
-										<th>Direccion</th>
-										<th>Telefono</th>
+										<th>Dirección</th>
+										<th>Teléfono</th>
 
                                         <th></th>
                                     </tr>
@@ -72,4 +73,5 @@
             </div>
         </div>
     </div>
+    <br><br><br><br>
 @endsection

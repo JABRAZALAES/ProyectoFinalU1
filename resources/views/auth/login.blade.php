@@ -1,62 +1,90 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tiendita - ESPE</title>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header text-center bg-primary text-white">
-                    <h4>{{ __('Inicio de Sesión') }}</h4>
-                </div>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+    <style>
+        body {
+            font-family: 'Nunito';
+            margin: 0; /* Eliminar el margen predeterminado del cuerpo */
+        }
 
-                        <div class="mb-3">
-                            <label for="email" class="form-label">{{ __('Correo Electrónico') }}</label>
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                            @error('email')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
+        footer {
+            background-color: #4CAF50; /* Color verde */
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
 
-                        <div class="mb-3">
-                            <label for="password" class="form-label">{{ __('Contraseña') }}</label>
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-                            @error('password')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+        }
 
-                        <div class="mb-3 form-check">
-                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                            <label class="form-check-label" for="remember">
-                                {{ __('Recordarme') }}
-                            </label>
-                        </div>
+        img {
+            max-width: 100%; /* Establecer el ancho máximo al 100% del contenedor */
+            height: auto; /* Hacer que la altura se ajuste automáticamente para mantener la proporción */
+            display: block; /* Eliminar espacio adicional debajo de la imagen */
+            margin: 0 auto; /* Centrar la imagen dentro de su contenedor */
+        }
 
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">
-                                {{ __('Iniciar Sesión') }}
-                            </button>
-                        </div>
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+        }
 
-                        @if (Route::has('password.request'))
-                            <div class="text-center mt-3">
-                                <a href="{{ route('password.request') }}">
-                                    {{ __('¿Olvidaste tu contraseña?') }}
-                                </a>
-                            </div>
-                        @endif
-                    </form>
-                </div>
-            </div>
-        </div>
+        .right-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .right-links a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: 600;
+            padding: 8px 16px;
+            border: 1px solid #4a5568;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .right-links a:hover {
+            background-color: #4CAF50;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+<nav>
+    <div class="logo">Tiendita - ESPE</div>
+    <div class="right-links">
+        @auth
+            <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Inicio</a>
+        @else
+            <a href="{{ route('login') }}">Iniciar Sesión</a>
+            @if (Route::has('register'))
+                <a href="{{ route('register') }}">Registrarse</a>
+            @endif
+        @endif
     </div>
+</nav>
+<div class="container">
+    <img src="https://th.bing.com/th/id/OIG.dXt1aq0.uqpEL.Fi5_9E?w=1024&h=1024&rs=1&pid=ImgDetMain">
 </div>
-@endsection
+
+<footer>
+    <p>Tiendita - ESPE - © {{ date('Y') }} Minimarket</p>
+</footer>
+
+</body>
+</html>

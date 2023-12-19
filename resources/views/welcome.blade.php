@@ -22,10 +22,12 @@
             background-color: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px); 
         }
+
         img{
             height: 100%;
             width: 100%;
         }
+        
 
         .logo {
             font-size: 24px;
@@ -76,7 +78,7 @@
         </div>
     </nav>
     <div class="container">
-        <img src="https://img.freepik.com/vector-gratis/miniatura-plana-youtube-supermercado_23-2149379522.jpg?w=900&t=st=1702853022~exp=1702853622~hmac=971e6fb2a30254ba186ad80e9a1ee5c32bb1a83b6dad826b948d66e5fa08f925">
+        <img src="https://th.bing.com/th/id/OIG.dXt1aq0.uqpEL.Fi5_9E?w=1024&h=1024&rs=1&pid=ImgDetMain">
     </div>
 
 </body>

@@ -14,7 +14,7 @@
                             <span class="card-title">{{ __('Show') }} Producto</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('productos.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary" href="{{ route('productos.index') }}"> {{ __('Atrás') }}</a>
                         </div>
                     </div>
 
@@ -25,7 +25,7 @@
                             {{ $producto->Nombre }}
                         </div>
                         <div class="form-group">
-                            <strong>Descripcion:</strong>
+                            <strong>Descripción:</strong>
                             {{ $producto->Descripcion }}
                         </div>
                         <div class="form-group">
@@ -42,4 +42,5 @@
             </div>
         </div>
     </section>
+    <br><br><br><br>
 @endsection

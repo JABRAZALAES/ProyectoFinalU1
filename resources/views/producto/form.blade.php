@@ -13,8 +13,8 @@
             {!! $errors->first('Nombre', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Descripción') }}
-            {{ Form::text('Descripcion', $producto->Descripcion, ['class' => 'form-control' . ($errors->has('Descripcion') ? ' is-invalid' : ''), 'placeholder' => 'Descripcion']) }}
+            {{ Form::label('Cantidad') }}
+            {{ Form::text('Descripcion', $producto->Descripcion, ['class' => 'form-control' . ($errors->has('Descripcion') ? ' is-invalid' : ''), 'placeholder' => 'Cantidad']) }}
             {!! $errors->first('Descripcion', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

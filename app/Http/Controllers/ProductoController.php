@@ -75,8 +75,10 @@ class ProductoController extends Controller
     public function edit($id)
     {
         $producto = Producto::find($id);
+        $cliente = Cliente::pluck('Nombre', 'id');
+        return view('producto.create', compact('producto', 'cliente'));
 
-        return view('producto.edit', compact('producto'));
+        return view('producto.edit', compact('producto', 'cliente'));
     }
 
     /**

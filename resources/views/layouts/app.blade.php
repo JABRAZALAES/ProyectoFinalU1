@@ -90,10 +90,10 @@
                                     <a class="nav-link" href="{{ route('clientes.index') }}">Clientes</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('productos.index') }}">Productos</a>
+                                    <a class="nav-link" href="{{ route('productos.index') }}">Productos Vendidos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('ventas.index') }}">Ventas</a>
+                                    <a class="nav-link" href="{{ route('ventas.index') }}">Registro de Ventas</a>
                                 </li>
 
                             <li class="nav-item dropdown">

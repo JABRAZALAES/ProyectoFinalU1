@@ -25,3 +25,7 @@ Route::resource("productos", App\Http\Controllers\ProductoController::class);
 Route::resource("ventas", App\Http\Controllers\VentaController::class);
 Route::get("ventas/{id}/agregarProducto", [App\Http\Controllers\VentaController::class, "agregarProducto"])->name("ventas.agregarProducto");
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

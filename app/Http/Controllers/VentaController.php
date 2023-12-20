@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Venta;
+use App\Cliente;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +33,8 @@ class VentaController extends Controller
     public function create()
     {
         $venta = new Venta();
-        return view('venta.create', compact('venta'));
+        $cliente = Cliente::pluck('Nombre', 'id');
+        return view('venta.create', compact('venta', 'cliente'));
     }
 
     /**
